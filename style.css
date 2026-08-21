@@ -334,8 +334,8 @@ img {
 
     position: absolute;
 
-    width: 550px;
-    height: 550px;
+    width: min(550px, 100vw);  /* <--- AJUSTADO: Usa 550px, mas diminui se a tela for menor */
+    height: min(550px, 100vw); /* <--- AJUSTADO: Mantém o círculo proporcional */
 
     background: radial-gradient(
         circle,
@@ -345,6 +345,8 @@ img {
 
     pointer-events: none;
 }
+
+
 
 .hero-visual img {
     width: 100%;
@@ -418,36 +420,36 @@ img {
     /* MENU MOBILE */
 
     .mobile-menu {
-        position: absolute;
+    position: absolute;
 
-        top: 76px;
-        left: 0;
+    top: 76px;
+    left: 0;
 
-        width: 100%;
-max-width: 100%;
-box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box; /* <--- Garante que o padding não aumente o tamanho dele */
         
+    padding: 12px 6% 28px;
 
-        padding: 12px 6% 28px;
+    display: flex;
+    flex-direction: column;
 
-        display: flex;
-        flex-direction: column;
+    background: rgba(8, 8, 8, 0.98);
 
-        background: rgba(8, 8, 8, 0.98);
+    border-bottom: 1px solid #252525;
 
-        border-bottom: 1px solid #252525;
+    opacity: 0;
+    visibility: hidden;
 
-        opacity: 0;
-        visibility: hidden;
+    transform: translateY(-10px);
 
-        transform: translateY(-10px);
+    pointer-events: none;
 
-        pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
 
-        transition:
-            opacity 0.25s ease,
-            transform 0.25s ease,
-            visibility 0.25s ease;
+
     }
 
     .navbar.menu-open .mobile-menu {
