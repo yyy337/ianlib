@@ -706,16 +706,14 @@ img {
     margin-bottom: 35px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
+    align-self: center;
 
     border: 1px solid #3b82f6;
-
     border-radius: 8px;
 
     background: #111111;
-
     color: #3b82f6;
 
     font-size: 18px;
@@ -736,6 +734,9 @@ img {
     font-weight: 600;
 
     letter-spacing: -0.03em;
+
+    text-align: center;
+    
 }
 
 
@@ -962,17 +963,19 @@ img {
 
 .carousel-track {
     width: 100%;
+    min-width: 0;
 
     display: flex;
 
     transition:
         transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .carousel-track img {
     width: 100%;
-
     min-width: 100%;
+    max-width: 100%;
+
+    flex: 0 0 100%;
 
     height: auto;
 
@@ -980,7 +983,6 @@ img {
 
     object-fit: cover;
 }
-
 
 /* ========================================
    SETAS
