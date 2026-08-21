@@ -825,6 +825,7 @@ img {
 
 .projects {
     width: 100%;
+    min-width: 0;
 
     padding: 160px 0;
 
