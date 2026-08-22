@@ -307,8 +307,24 @@ img {
 .button-secondary {
     border: 1px solid #292929;
     color: #ffffff;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
 }
 
+.whatsapp-icon {
+    width: 17px;
+    height: 17px;
+
+    fill: currentColor;
+
+    flex-shrink: 0;
+}
+
+.button-secondary i {
+    font-size: 17px;
+}
 .button-secondary:hover {
     border-color: #555555;
     background: #111111;
@@ -585,7 +601,7 @@ img {
 .services {
     width: 100%;
 
-    padding: 140px 0;
+    padding: 120px 0;
 
     background: #080808;
 
@@ -854,7 +870,7 @@ img {
 .projects-header {
     max-width: 800px;
 
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 
 .projects-label {
@@ -998,35 +1014,37 @@ img {
     position: absolute;
 
     top: 50%;
-
     transform: translateY(-50%);
 
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 50%;
 
-    background: rgba(8, 8, 8, 0.75);
+    background: rgba(8, 8, 8, 0.82);
 
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     color: #ffffff;
 
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 400;
 
     cursor: pointer;
+
+    z-index: 5;
 
     transition:
         background 0.25s ease,
         border-color 0.25s ease,
-        transform 0.25s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .carousel-button:hover {
@@ -1034,7 +1052,10 @@ img {
 
     border-color: #3b82f6;
 
-    transform: translateY(-50%) scale(1.05);
+    transform: translateY(-50%) scale(1.08);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 .carousel-prev {
@@ -1044,7 +1065,6 @@ img {
 .carousel-next {
     right: 18px;
 }
-
 
 /* ========================================
    INDICADORES
@@ -1286,12 +1306,12 @@ img {
         border-radius: 9px;
     }
 
-    .carousel-button {
-        width: 38px;
-        height: 38px;
+ .carousel-button {
+    width: 44px;
+    height: 44px;
 
-        font-size: 15px;
-    }
+    font-size: 17px;
+}
 
     .carousel-prev {
         left: 10px;
@@ -1321,7 +1341,7 @@ img {
 .about {
     width: 100%;
 
-    padding: 140px 0 150px;
+    padding: 120px 0 130px;
 
     background: #050505;
 }
@@ -1643,7 +1663,7 @@ img {
 .process {
     width: 100%;
 
-    padding: 160px 0;
+    padding: 130px 0;
 
     background: #0b0b0b;
 
@@ -1961,7 +1981,7 @@ img {
 .contact {
     width: 100%;
 
-    padding: 160px 0;
+    padding: 130px 0;
 
     background: #080808;
 
